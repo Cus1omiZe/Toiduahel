@@ -27,5 +27,5 @@ public class Aken extends Application
         stage.setScene(new Scene(juur));
         stage.show();
     }
-    void
+    //void
 }
