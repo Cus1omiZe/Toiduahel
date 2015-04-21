@@ -27,5 +27,20 @@ public class Aken extends Application
         stage.setScene(new Scene(juur));
         stage.show();
     }
-    //void
+    void salvesta()
+    {
+        try
+        {
+            Properties prop = new Properties();
+            prop.put("hunte", hunte);
+            prop.put("janesid", janesid);
+            FileOutputStream fos = new FileOutputStream("andmed.txt");
+            prop.store(fos, "Metsaandmed");
+            fos.close();
+        }
+        catch (IOException ex)
+        {
+            ex.printStackTrace();
+        }
+    }
 }
